@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+
+      bindings:
+        apply-in-0:
+          destination: create-book
+        apply-out-0:
+          destination: store-book
